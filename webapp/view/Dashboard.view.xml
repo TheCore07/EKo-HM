@@ -1,0 +1,31 @@
+<mvc:View xmlns:c="sap.ui.core" controllerName="ekohm.ekohm.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Toolbar >
+            <Button text="{i18n>groupText_sysUser}" press="onJumpToGroup">
+                <customData>
+                    <c:CustomData key="group" value="sysUser"/>
+                </customData>
+            </Button>
+            <Button text="{i18n>groupText_customizing}" press="onJumpToGroup">
+                <customData>
+                    <c:CustomData key="group" value="custom"/>
+                </customData>
+            </Button>
+        </Toolbar>
+
+        <ScrollContainer vertical="true" horizontal="false" height="100%" width="100%" id="launchpadScroll">
+            <VBox >
+                <VBox id="group_sysUser">
+                    <Title text="{i18n>groupText_sysUser}" level="H2" class="sapUiSmallMargin"/>
+                    <c:Fragment fragmentName="ekohm.ekohm.view.fragments.groups.SystemUserGroup" type="XML"/>
+                </VBox>
+                <VBox id="group_custom">
+                    <Title text="{i18n>groupText_customizing}" level="H2" class="sapUiSmallMargin"/>
+                    <c:Fragment fragmentName="ekohm.ekohm.view.fragments.groups.CustomizingGroup" type="XML"/>
+                </VBox>
+            </VBox>
+        </ScrollContainer>
+    </Page>
+</mvc:View>

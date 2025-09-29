@@ -1,0 +1,17 @@
+<c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core" >
+    <HBox wrap="Wrap" >
+        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>sysUser_tileHeader}"
+            subheader="{i18n>sysUser_tileSubheader}" press="onPress">
+            <TileContent >
+                <VBox class="sapUiSmallMargin" justifyContent="Center" alignItems="Center">
+                    <items>
+                        <c:Icon
+                            src="{= ${SystemUser>/isCreated} ? 'sap-icon://accept' : 'sap-icon://alert'}"
+                            size="3rem"
+                            color="{= ${SystemUser>/isCreated} ? 'green' : 'red'}"/>
+                    </items>
+                </VBox>
+            </TileContent>
+        </GenericTile>
+    </HBox>
+</c:FragmentDefinition>

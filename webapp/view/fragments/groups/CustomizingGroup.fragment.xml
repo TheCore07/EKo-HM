@@ -1,0 +1,8 @@
+<c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core">
+    <HBox wrap="Wrap">
+        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+            header="{i18n>customizing_tileHeader}" subheader="{i18n>customizing_tileSubheader}"/>
+        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+            header="{i18n>customizing_tileHeader}" subheader="{i18n>customizing_tileSubheader}"/>
+    </HBox>
+</c:FragmentDefinition>
