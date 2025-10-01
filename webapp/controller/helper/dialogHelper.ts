@@ -1,5 +1,8 @@
 import MessageBox from "sap/m/MessageBox";
 
+/**
+ * @namespace ekohm.ekohm.controller.helper
+ */
 export class dialogHelper {
 
     /**
@@ -7,15 +10,16 @@ export class dialogHelper {
      * 
      * @param message The text that is beeing displayed in the dialog
      * @param title The Title of the Dialog
-     * @param onConfirm The following function thats beeing triggered when the dialog was confirmed
+     * @param onConfirm The following function thats beeing triggered when the 
+     *                  dialog was confirmed (The function needs a .bind(this) in the controller so it wont loose its Context)
      */
     public static showConfirm(
-        message: string,
-        title: string,
+        message: string | undefined,
+        title: string | undefined,
         onConfirm: () => void
     ): void {
         MessageBox.confirm(
-            message, 
+            message as string, 
             {
                 title: title,
                 actions: [MessageBox.Action.OK, MessageBox.Action.CANCEL],
@@ -27,6 +31,9 @@ export class dialogHelper {
                 }
             }
         );
+
+
+    
 
     }
 }

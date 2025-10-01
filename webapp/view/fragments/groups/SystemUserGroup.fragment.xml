@@ -1,7 +1,12 @@
 <c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core" >
     <HBox wrap="Wrap" >
         <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>sysUser_tileHeader}"
-            subheader="{i18n>sysUser_tileSubheader}" press="onPress">
+            subheader="{i18n>sysUser_tileSubheader}" press="onGenericTilePress">
+            <customData>
+                <c:CustomData key="model" value="SystemUser"/>
+                <c:CustomData key="i18nPopUpTitle" value="sysUser_createTitle"/>
+                <c:CustomData key="i18nPopUpMessage" value="sysUser_createUser"/>
+            </customData>
             <TileContent >
                 <VBox class="sapUiSmallMargin" justifyContent="Center" alignItems="Center">
                     <items>

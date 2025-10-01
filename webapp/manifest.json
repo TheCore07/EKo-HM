@@ -74,7 +74,7 @@
             },
             "routes": [
                 {
-                    "name": "RouteDashboard",
+                    "name": "Dashboard",
                     "pattern": ":?query:",
                     "target": [
                         "TargetDashboard"

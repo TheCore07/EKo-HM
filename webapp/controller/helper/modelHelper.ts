@@ -1,6 +1,9 @@
 import Controller from "sap/ui/core/mvc/Controller";
 import JSONModel from "sap/ui/model/json/JSONModel";
 
+/**
+ * @namespace ekohm.ekohm.controller.helper
+ */
 export class modelHelper {
 
     /**

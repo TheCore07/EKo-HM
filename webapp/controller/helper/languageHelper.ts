@@ -2,6 +2,9 @@ import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import Controller from "sap/ui/core/mvc/Controller";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
 
+/**
+ * @namespace ekohm.ekohm.controller.helper
+ */
 export class languageHelper {
 
     /**
@@ -15,7 +18,7 @@ export class languageHelper {
         that: Controller,
         property: string,
         args?: any[]
-    ): string | undefined {
+    ): string {
         const oView = that.getView();
         if (!oView) {
             console.warn("View not found on Controller!");
@@ -29,6 +32,6 @@ export class languageHelper {
         }
 
         const i18nBundle = i18nModel.getResourceBundle() as ResourceBundle;
-        return i18nBundle.getText(property, args);
+        return i18nBundle.getText(property, args) as string;
     }
 }
