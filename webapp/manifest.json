@@ -14,6 +14,16 @@
             "id": "@sap/generator-fiori:basic",
             "version": "1.15.6",
             "toolsId": "eb637f7d-e48e-418b-8ad6-edb224b5bd16"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/ZEKO_HM_ODATA/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata.xml"
+                }
+            }
         }
     },
     "sap.ui": {
@@ -46,6 +56,13 @@
             "cozy": true
         },
         "models": {
+            "": {
+                "dataSource": "mainService",
+                "settings": {
+                    "useBatch": true,
+                    "defaultBindingMode": "TwoWay"
+                }
+            },
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {

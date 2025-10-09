@@ -37,6 +37,13 @@ server:
       afterMiddleware: compression
       configuration:
         ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+    - name: ui5-middleware-simpleproxy
+      afterMiddleware: compression
+      mountPath: /sap
+      configuration:
+        baseUri: https://<dein-system>.yourdomain.com/sap
+        username: <dein_user>
+        password: <dein_passwort>
 builder:
   customTasks:
     - name: ui5-tooling-transpile-task
